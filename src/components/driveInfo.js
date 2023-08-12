@@ -12,7 +12,7 @@ const driveInfo = ({ info, files, ...props }) => {
     router.push("/");
   };
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between items-start">
       <div className=" mb-4">
         <p>Total Storage: {formatSize(info.storageQuota?.limit)} </p>
         <p>Storage Usage: {formatSize(info.storageQuota?.usage)} </p>
@@ -27,13 +27,7 @@ const driveInfo = ({ info, files, ...props }) => {
           Scanning... {files.length} files found
         </div>
       </div>
-      <div className="">
-        <button
-          onClick={revoke}
-          className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Revoke Google Access
-        </button>
+      <div className=" space-y-1">
         <div className="mb-4 flex items-center">
           <img
             src={info.user?.photoLink}
@@ -45,6 +39,12 @@ const driveInfo = ({ info, files, ...props }) => {
             <p className="text-gray-500">{info.user?.emailAddress}</p>
           </div>
         </div>
+        <button
+          onClick={revoke}
+          className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Revoke Google Access
+        </button>
       </div>
     </div>
   );

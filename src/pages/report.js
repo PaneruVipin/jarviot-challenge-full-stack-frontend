@@ -1,6 +1,7 @@
 import { getFiles, getInfo } from "$/apis/drive";
 import DriveInfo from "$/components/driveInfo";
 import FileItem from "$/components/fileItem";
+import Variations from "$/components/variations";
 import { removeFromLocalStorage } from "$/lib/localstorage";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
@@ -54,11 +55,12 @@ export default function Report() {
   return (
     <>
       {Object.keys(info)?.length ? (
-        <div className=" p-6">
+        <div className=" p-6 space-y-2">
           <h2 className="text-2xl font-semibold mb-4">
             Google Drive Risk Report
           </h2>
           <DriveInfo info={info} files={files} />
+          <Variations files={files} />
           <div className="">
             <h3 className="text-xl font-semibold mb-2">File List:</h3>
             <div className=" flex gap-4 justify-start flex-wrap">
