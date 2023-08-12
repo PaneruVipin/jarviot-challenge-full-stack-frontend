@@ -20,7 +20,7 @@ export default function Home() {
           Click the button below to link your Google Drive account:
         </p>
         <a
-          href="http://localhost:4000/google/redirect"
+          href={process.env.NEXT_PUBLIC_BACKEND_BASE_URL + "/google/redirect"}
           className="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded  text-center"
         >
           Link Google Drive
