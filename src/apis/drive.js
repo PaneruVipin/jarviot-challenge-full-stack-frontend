@@ -4,9 +4,7 @@ import axios from "axios";
 const apiBaseUrl = process.env.NEXT_PUBLIC_BACKEND_BASE_URL;
 export const getFiles = async (page = "") => {
   try {
-    const token =
-      getFromLocalStorage("token") ||
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ3STYyZExmVjJ3WlpZbjlLaTdwWCIsImlhdCI6MTY5MTg0MjA3NSwiZXhwIjoxNjkyMTAxMjc1fQ.ZkShKuRWMZF3J9ROh14Q9WfvXEH6N9cm_HJNNC3eXNo";
+    const token = getFromLocalStorage("token");
     const { data } = await axios.get(apiBaseUrl + "/users/drive/files", {
       headers: {
         Authorization: token,
