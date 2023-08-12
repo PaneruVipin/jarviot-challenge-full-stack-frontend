@@ -22,7 +22,8 @@ export default function Report() {
     }
   };
   useEffect(() => {
-    getAllFiles();
+    console.log("envS", process.env.NEXT_PUBLIC_BACKEND_BASE_URL);
+    // getAllFiles();
     // const userApiResponse = {
     //   user: {
     //     kind: "drive#user",
