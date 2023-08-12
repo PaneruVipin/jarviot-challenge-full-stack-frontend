@@ -1,16 +1,17 @@
-import { setInLocalStorage } from "$/lib/localstorage";
+import { getFromLocalStorage, setInLocalStorage } from "$/lib/localstorage";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function Home() {
   const router = useRouter();
-  const token = router.query.t;
+
+  const token = () => router.query.t || getFromLocalStorage("token");
   useEffect(() => {
-    if (token) {
+    if (token()) {
       router.push("report");
-      setInLocalStorage("token", token);
+      setInLocalStorage("token", token());
     }
-  }, [token]);
+  }, [token()]);
   return (
     <main className="bg-gray-100 min-h-screen flex ">
       <div className="bg-white p-8 rounded-lg shadow-md w-96 ml-[10%] mt-[10%] h-full">
