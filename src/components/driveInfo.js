@@ -12,7 +12,7 @@ const driveInfo = ({ info, files, ...props }) => {
     router.push("/");
   };
   return (
-    <div className="flex justify-between items-start">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div className=" mb-4">
         <p>Total Storage: {formatSize(info.storageQuota?.limit)} </p>
         <p>Storage Usage: {formatSize(info.storageQuota?.usage)} </p>
@@ -21,7 +21,7 @@ const driveInfo = ({ info, files, ...props }) => {
           Usage in trash: {formatSize(info.storageQuota?.usageInDriveTrash)}
         </p>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-start">
         <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-blue-500 mb-2"></div>
         <div className="text-blue-500 font-bold text-lg">
           Scanning... {files.length} files found
