@@ -23,7 +23,7 @@ export default function Report() {
   };
   useEffect(() => {
     console.log("envS", process.env.NEXT_PUBLIC_BACKEND_BASE_URL);
-    // getAllFiles();
+    getAllFiles();
     // const userApiResponse = {
     //   user: {
     //     kind: "drive#user",
