@@ -1,6 +1,7 @@
 import { getFiles, getInfo } from "$/apis/drive";
 import DriveInfo from "$/components/driveInfo";
 import FileItem from "$/components/fileItem";
+import Loader from "$/components/loader";
 import Variations from "$/components/variations";
 import { removeFromLocalStorage } from "$/lib/localstorage";
 import { useRouter } from "next/router";
@@ -81,7 +82,7 @@ export default function Report() {
           </div>
         </div>
       ) : (
-        <></>
+        <Loader />
       )}
     </>
   );

@@ -25,8 +25,10 @@ export default function Home() {
         >
           Link Google Drive
         </a>
-        <p className="mt-4 text-sm text-gray-500">
-          You need to sign in with your Google account to link your Drive.
+        <p className="mt-4 text-md text-gray-500">
+          <strong>Important:</strong> Make sure to sign in with your Google
+          account and provide the necessary permissions to enable linking to
+          your Google Drive.
         </p>
       </div>
     </main>
