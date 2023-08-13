@@ -8,7 +8,7 @@ To successfully run the program on your local machine, follow these steps:
 2. **Clone the Git Repository:**
    Clone the project's Git repository using the following command:
    ```bash
-   git clone [repository_url]
+   git clone https://github.com/PaneruVipin/jarviot-challenge-full-stack-frontend.git
    ```
 
 3. **Install Dependencies:**
